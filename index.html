@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>HTML Color Names Picker</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+
+    <body>
+        <div class='container'>
+        <header>
+                
+        <div class='header-wrapper'>
+                <div id='active-wrapper-1'>
+                        <button id='name-btn' class='btn-1 active-1'>Name</button>
+                        <button id='hex-btn' class='btn-1'>HEX</button>
+                        <button id='rgb-btn' class='btn-1'>RGB</button>
+                </div>
+                
+                <div id='active-wrapper-2'>
+                        <button id='normal-btn' class='btn-2 active-2'>Normal</button>
+                        <button id='deuteranopia-btn' class='btn-2'>Deuteranopia</button>
+                        <button id='protanopia-btn' class='btn-2'>Protanopia</button>
+                        <button id='tritanopia-btn' class='btn-2'>Tritanopia</button>
+                        <button id='achromatopsia-btn' class='btn-2'>Achromatopsia</button>
+                        
+                </div>
+
+                <div id='active-wrapper-3'>
+                        <div id='changeBg' class="switch">
+                                <div class="button"></div>
+                        </div>
+                        <!--<button id='changeBg'>Switch Mode</button>-->
+                </div>
+        </div>
+   
+        </header>
+        <section id='section1'>
+                <p class='pageTitle'>HTML Color Names Picker</p>
+                <p class='content'>Click on the color you like to <mark>copy</mark> color names, along with full screen color blindness simulator and dark mode!</p>
+        </section>
+        <section id='section2'>
+        <div class='wrapper-1 wrapper'>
+                <p class='title'>Pink Colors</p><br>
+        </div><br>
+        <div class='wrapper-2 wrapper'>
+                <p class='title'>Purple Colors</p><br>
+        </div><br>
+        <div class="wrapper-3 wrapper">
+                <p class='title'>Red Colors</p><br>
+        </div><br>
+        <div class="wrapper-4 wrapper">
+                <p class='title'>Orange Colors</p><br>
+        </div><br>
+        <div class="wrapper-5 wrapper">
+                <p class='title'>Yellow Colors</p>
+        </div>
+        <div class="wrapper-6 wrapper">
+                <p class='title'>Green Colors</p>
+        </div>
+        <div class="wrapper-7 wrapper">
+                <p class='title'>Cyan Colors</p>
+        </div>
+        <div class="wrapper-8 wrapper">
+                <p class='title'>Blue Colors</p>
+        </div>
+        <div class="wrapper-9 wrapper">
+                <p class='title'>Brown Colors</p>
+        </div>
+        <div class="wrapper-10 wrapper">
+                <p class='title'>White Colors</p>
+        </div>
+        <div class="wrapper-11 wrapper">
+                <p class='title'>Grey Colors</p>
+        </div>
+        </section>
+        </div>
+
+        <footer>
+                <p>Made in 2018 by Ying Ying Szeto</p>
+        </footer>
+
+        <svg id='svg-filter' xmlns="http://www.w3.org/2000/svg"
+        version="1.1">
+        <defs>
+            <filter id="svg-deuteranopia">
+                  <feColorMatrix 
+                    in="SourceGraphic"
+                    type="matrix"
+                    values="0.625, 0.375, 0,   0, 0
+                            0.7,   0.3,   0,   0, 0
+                            0,     0.3,   0.7, 0, 0
+                            0,     0,     0,   1, 0"/>
+            </filter>
+            
+            <filter id="svg-protanopia">
+                <feColorMatrix
+                  in="SourceGraphic"
+                  type="matrix"
+                  values="0.567, 0.433, 0,     0, 0
+                          0.558, 0.442, 0,     0, 0
+                          0,     0.242, 0.758, 0, 0
+                          0,     0,     0,     1, 0"/>
+              </filter>
+              <filter id="svg-tritanopia">
+                <feColorMatrix
+                  in="SourceGraphic"
+                  type="matrix"
+                  values="0.95, 0.05,  0,     0, 0
+                          0,    0.433, 0.567, 0, 0
+                          0,    0.475, 0.525, 0, 0
+                          0,    0,     0,     1, 0"/>
+              </filter>
+              <filter id="svg-achromatopsia">
+                <feColorMatrix
+                  in="SourceGraphic"
+                  type="matrix"
+                  values="0.299, 0.587, 0.114, 0, 0
+                          0.299, 0.587, 0.114, 0, 0
+                          0.299, 0.587, 0.114, 0, 0
+                          0,     0,     0,     1, 0"/>
+              </filter>
+        </defs>
+        </svg>
+        <!-- clipboard.js -->
+        <script src='https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.5.10/clipboard.min.js'></script>
+        <script src="main.js"></script>
+    </body>
+    
+    
+</html>
