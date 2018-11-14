@@ -1,5 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i");
-@import url("https://fonts.googleapis.com/css?family=Song+Myung");
+@import url("https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Condensed:400,700|Roboto+Mono:400,500,700");
 * {
   margin: 0;
   padding: 0;
@@ -111,15 +110,16 @@ button {
 
 #section1 {
   width: 960px;
-  border-bottom: 1px solid #eeeeee;
+  border-bottom: 1px solid Gainsboro;
   margin: 0 auto; }
 
 .pageTitle {
-  font: bold 2em "Song Myung", serif;
-  margin: 20px 0 10px; }
+  font: bold 2em "Roboto Mono", monospace;
+  margin: 20px 0 10px;
+  letter-spacing: 2px; }
 
 .content {
-  font: 400 1em/1.4em "Lato", sans-serif;
+  font: 1em/1.4em "Roboto Condensed", sans-serif;
   padding-bottom: 30px; }
 
 mark {
@@ -133,27 +133,32 @@ mark {
   clear: left; }
 
 .title {
-  font: 1.4em "Song Myung", serif;
-  padding: 4% 0 3%; }
+  font: 700 1.4em "Roboto Mono", monospace;
+  padding: 4% 0 0%; }
 
 .box {
-  font: bold 0.8em "Lato", sans-serif;
+  font: bold 0.7em "Roboto Condensed", sans-serif;
   width: 80px;
-  height: 68px;
-  margin: 1% 0.7%;
-  padding: 41px 56px 41px 8px;
+  height: 0px;
+  margin: 12px 16px 12px 0px;
+  padding: 20px 56px 60px 8px;
   float: left;
   border-radius: 5px;
   color: white;
   text-transform: capitalize;
+  letter-spacing: 1px;
+  box-shadow: 5px 5px 0px #e0e0e0;
   cursor: crosshair;
   animation: changeShape 2s 0s; }
 
-@keyframes changeShape {
-  0% {
-    border-radius: 40px; } }
+/*@keyframes changeShape {
+    0% {
+        border-radius: 40px;
+    }
+}*/
 .box:hover {
-  transform: translateX(5px); }
+  transform: translate(3px, 3px);
+  box-shadow: none; }
 
 .lighterColors {
   color: silver; }
@@ -162,7 +167,7 @@ footer {
   width: 100%;
   margin-top: 60px;
   padding: 50px 0;
-  font: 0.7em "Lato", sans-serif;
+  font: 0.7em "Lato";
   background-color: mediumorchid;
   color: white;
   letter-spacing: 1px; }
@@ -204,8 +209,17 @@ footer > p {
 
   #section2 {
     margin: auto; } }
+@media only screen and (max-width: 768px) {
+  .header-wrapper {
+    grid-gap: 5%; } }
 @media only screen and (max-width: 414px) {
   #active-wrapper-2 {
-    display: none; } }
+    display: none; }
+
+  .pageTitle {
+    font: bold 1.5em "Roboto Mono", monospace; }
+
+  #active-wrapper-1 {
+    grid-template-columns: repeat(4, 1fr); } }
 
 /*# sourceMappingURL=style.css.map */
