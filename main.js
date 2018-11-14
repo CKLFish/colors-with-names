@@ -222,7 +222,7 @@ function clickBtn(el, clickNum, colorBoxes, i) {
 function colorBlind(btn, link) {
 
     document.getElementById(btn).addEventListener('click', function() {
-        for (let i = 0; i < 8; i++) {
+        for (let i = 0; i < 11; i++) {
 
             document.querySelector(`.wrapper-${i + 1}`).style.filter = link;
             
