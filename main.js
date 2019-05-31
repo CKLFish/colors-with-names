@@ -187,7 +187,7 @@ for(let i = 0; i < colors.length; i++) {
   
     colorBoxes.style.backgroundColor = `${colors[i][0]}`;
     colorBoxes.classList.add('box');
-    colorBoxes.textContent = `${colors[i][0]}`; 
+    colorBoxes.textContent = `${colors[i][0]}\n${colors[i][1]}\n${colors[i][2]}`; 
 
     createClipboard(`.colorBox-${i}`, `${colors[i][0]}`);
 
